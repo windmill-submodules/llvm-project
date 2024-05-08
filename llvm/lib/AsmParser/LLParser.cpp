@@ -4069,7 +4069,7 @@ bool LLParser::parseValID(ValID &ID, PerFunctionState *PFS, Type *ExpectedTy) {
     if (!Ptr->getType()->isPointerTy())
       return error(ID.Loc, "signed pointer must be a pointer");
 
-    auto KeyC = dyn_cast<ConstantInt>(Key);
+    auto *KeyC = dyn_cast<ConstantInt>(Key);
     if (!KeyC || KeyC->getBitWidth() != 32)
       return error(ID.Loc, "signed pointer key must be i32 constant integer");
 
@@ -4077,7 +4077,7 @@ bool LLParser::parseValID(ValID &ID, PerFunctionState *PFS, Type *ExpectedTy) {
       return error(ID.Loc,
                    "signed pointer address discriminator must be a pointer");
 
-    auto DiscC = dyn_cast<ConstantInt>(Disc);
+    auto *DiscC = dyn_cast<ConstantInt>(Disc);
     if (!DiscC || DiscC->getBitWidth() != 64)
       return error(ID.Loc,
                    "signed pointer discriminator must be i64 constant integer");
