@@ -7579,7 +7579,6 @@ cc_library(
         "include/mlir/Transforms/LoopInvariantCodeMotionUtils.h",
         "include/mlir/Transforms/OneToNTypeConversion.h",
         "include/mlir/Transforms/RegionUtils.h",
-        "include/mlir/Transforms/TopologicalSortUtils.h",
     ],
     includes = ["include"],
     deps = [
