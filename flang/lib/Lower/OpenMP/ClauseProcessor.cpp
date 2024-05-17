@@ -997,7 +997,7 @@ bool ClauseProcessor::processEnter(
 }
 
 bool ClauseProcessor::processUseDeviceAddr(
-    mlir::omp::UseDeviceClauseOps &result,
+    mlir::omp::UseDeviceAddrClauseOps &result,
     llvm::SmallVectorImpl<mlir::Type> &useDeviceTypes,
     llvm::SmallVectorImpl<mlir::Location> &useDeviceLocs,
     llvm::SmallVectorImpl<const Fortran::semantics::Symbol *> &useDeviceSyms)
@@ -1011,7 +1011,7 @@ bool ClauseProcessor::processUseDeviceAddr(
 }
 
 bool ClauseProcessor::processUseDevicePtr(
-    mlir::omp::UseDeviceClauseOps &result,
+    mlir::omp::UseDevicePtrClauseOps &result,
     llvm::SmallVectorImpl<mlir::Type> &useDeviceTypes,
     llvm::SmallVectorImpl<mlir::Location> &useDeviceLocs,
     llvm::SmallVectorImpl<const Fortran::semantics::Symbol *> &useDeviceSyms)
